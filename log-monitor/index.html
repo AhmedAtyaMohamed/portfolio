@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universal Log Monitor</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="extra.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">LOG OBSERVABILITY · OFFLINE</p>
+        <h1>Universal Log Monitor</h1>
+        <p class="subtitle">
+          Finds every <strong>.log</strong> and <strong>.txt</strong> file on this machine and analyzes any log format
+          (log4net, NLog, Serilog, ASP.NET, IIS, JSON, custom API ...). Everything runs locally — nothing is uploaded.
+        </p>
+      </div>
+      <div class="header-actions">
+        <button id="themeToggle" class="icon-button" type="button" title="Toggle theme">☾</button>
+      </div>
+    </header>
+
+    <nav class="tabs" role="tablist">
+      <button class="tab-button active" data-tab="files" type="button">📁 Log files on disk <span id="tabFilesCount" class="tab-count">0</span></button>
+      <button class="tab-button" data-tab="analyze" type="button">📊 Analyzer <span id="tabEntriesCount" class="tab-count">0</span></button>
+      <button class="tab-button" data-tab="search" type="button">🔎 Search all logs</button>
+    </nav>
+
+    <!-- ===================================================== FILES TAB -->
+    <main id="tab-files" class="tab-page">
+      <section class="panel scan-panel">
+        <div class="panel-heading">
+          <div>
+            <p class="eyebrow">DISK INDEX</p>
+            <h2 id="scanTitle">Scanning…</h2>
+            <p id="scanInfo" class="muted">Starting…</p>
+          </div>
+          <div class="table-actions">
+            <button id="rescanButton" class="button secondary" type="button">Rescan disk</button>
+          </div>
+        </div>
+        <div class="progress-track wide-track"><div id="scanBar" class="progress-bar indeterminate"></div></div>
+        <p id="scanCurrent" class="muted small mono"></p>
+        <p class="muted small">Roots: <span id="rootsInfo" class="mono"></span> · Excluded: <span id="excludeInfo" class="mono"></span></p>
+      </section>
+
+      <section class="stats-grid stats-grid-5">
+        <article class="stat-card"><span>Log files found</span><strong id="fsCount">0</strong><small id="fsCountSub">—</small></article>
+        <article class="stat-card"><span>Total size</span><strong id="fsSize">0 B</strong><small id="fsSizeSub">—</small></article>
+        <article class="stat-card success"><span>Modified last 24h</span><strong id="fsRecent">0</strong><small id="fsRecentSub">active logs</small></article>
+        <article class="stat-card danger"><span>Largest file</span><strong id="fsLargest">0 B</strong><small id="fsLargestSub" class="ellipsis">—</small></article>
+        <article class="stat-card"><span>Folders with logs</span><strong id="fsFolders">0</strong><small>distinct folders</small></article>
+      </section>
+
+      <section class="panel filters-panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">FILTERS</p><h2>Find log files</h2></div>
+          <button id="resetFileFilters" class="button ghost" type="button">Reset filters</button>
+        </div>
+        <div class="filters-grid">
+          <label class="field wide"><span>Path or name contains</span>
+            <input id="fileSearch" type="search" placeholder="e.g. \Logs\, error" /></label>
+          <label class="field"><span>Extension</span>
+            <select id="fileExt"><option value="">.log and .txt</option><option value=".log">.log only</option><option value=".txt">.txt only</option></select></label>
+          <label class="field"><span>Modified</span>
+            <select id="fileAge"><option value="">Any time</option><option value="3600">Last hour</option><option value="86400">Last 24 hours</option>
+              <option value="604800">Last 7 days</option><option value="2592000">Last 30 days</option></select></label>
+          <label class="field"><span>Min size (KB)</span><input id="fileMinSize" type="number" min="0" placeholder="e.g. 1" /></label>
+          <label class="field"><span>Max size (MB)</span><input id="fileMaxSize" type="number" min="0" placeholder="e.g. 500" /></label>
+          <label class="field checkbox-field"><input id="hideEmpty" type="checkbox" checked /><span>Hide empty files</span></label>
+          <label class="field checkbox-field"><input id="logsLike" type="checkbox" /><span>Only names that look like logs</span></label>
+        </div>
+      </section>
+
+      <section class="insights-grid">
+        <article class="panel">
+          <div class="panel-heading compact"><div><p class="eyebrow">TOP FOLDERS</p><h2>Where the logs are</h2></div></div>
+          <div id="folderSummary" class="summary-list"><p class="empty-state">No files yet.</p></div>
+        </article>
+        <article class="panel">
+          <div class="panel-heading compact"><div><p class="eyebrow">ACTIVITY</p><h2>Most recently written</h2></div></div>
+          <div id="recentList" class="summary-list"><p class="empty-state">No files yet.</p></div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">FILES</p><h2>All log files</h2><p id="fileResultCount" class="muted">0 files</p></div>
+          <div class="table-actions">
+            <label class="inline-field">Read <select id="tailSize" class="small-select">
+              <option value="">whole file (≤ limit)</option><option value="1">last 1 MB</option><option value="5" selected>last 5 MB</option>
+              <option value="20">last 20 MB</option><option value="50">last 50 MB</option></select></label>
+            <button id="clearSelection" class="button ghost" type="button">Clear selection</button>
+            <button id="analyzeSelected" class="button primary" type="button">Analyze selected (0)</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr class="sort-row">
+              <th><input id="selectAllFiles" type="checkbox" title="Select page" /></th>
+              <th data-fsort="name">Name <span class="sort-indicator">↕</span></th>
+              <th data-fsort="dir">Folder <span class="sort-indicator">↕</span></th>
+              <th data-fsort="size">Size <span class="sort-indicator">↕</span></th>
+              <th data-fsort="mtime">Modified <span class="sort-indicator active">↓</span></th>
+              <th></th>
+            </tr></thead>
+            <tbody id="filesTableBody"><tr><td colspan="6" class="empty-cell">Scanning disk…</td></tr></tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button id="filesPrev" class="button ghost" type="button">Previous</button>
+          <span id="filesPageInfo">Page 1 of 1</span>
+          <button id="filesNext" class="button ghost" type="button">Next</button>
+          <label>Rows <select id="filesPageSize"><option>50</option><option selected>100</option><option>250</option><option>500</option></select></label>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================================================== ANALYZER TAB -->
+    <main id="tab-analyze" class="tab-page hidden">
+      <section id="dropZone" class="upload-card" tabindex="0" aria-label="Upload log files">
+        <input id="fileInput" type="file" accept=".log,.txt,text/plain" multiple hidden />
+        <div class="upload-icon">↥</div>
+        <div>
+          <h2>Analyze files from the “Log files” tab, or drop files here</h2>
+          <p>Any text log works. You can mix several files — entries are merged on one timeline.</p>
+        </div>
+        <div class="header-actions">
+          <button id="browseButton" class="button primary" type="button">Choose files</button>
+          <button id="clearButton" class="button secondary" type="button">Clear data</button>
+        </div>
+      </section>
+
+      <section id="fileInfo" class="file-info hidden" aria-live="polite">
+        <div><strong id="fileName">No file loaded</strong><span id="fileMeta"></span></div>
+        <div class="progress-track"><div id="progressBar" class="progress-bar"></div></div>
+      </section>
+      <div id="fileChips" class="file-chips hidden"></div>
+
+      <section class="stats-grid stats-grid-8">
+        <article class="stat-card"><span>Log entries</span><strong id="stEntries">0</strong><small id="stLines">0 lines</small></article>
+        <article class="stat-card danger"><span>Errors</span><strong id="stErrors">0</strong><small id="stErrorRate">0% of entries</small></article>
+        <article class="stat-card warn"><span>Warnings</span><strong id="stWarns">0</strong><small id="stWarnRate">0% of entries</small></article>
+        <article class="stat-card"><span>Exceptions</span><strong id="stExc">0</strong><small id="stExcTypes">0 types</small></article>
+        <article class="stat-card success"><span>HTTP success</span><strong id="stHttp">—</strong><small id="stHttpSub">no HTTP data</small></article>
+        <article class="stat-card"><span>Avg / P95 duration</span><strong id="stDur">—</strong><small id="stDurSub">no durations</small></article>
+        <article class="stat-card rps-card"><span>⚡ Peak rate</span><strong id="stPeak">0</strong><small id="stPeakTime">No data</small><small id="stPeakAvg" class="rps-avg-line"></small></article>
+        <article class="stat-card"><span>Time span</span><strong id="stSpan">—</strong><small id="stSpanSub">—</small></article>
+      </section>
+
+      <section class="panel filters-panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">FILTERS</p><h2>Search and filter entries</h2></div>
+          <button id="resetFilters" class="button ghost" type="button">Reset filters</button>
+        </div>
+        <div class="filters-grid">
+          <label class="field wide"><span>Search (text or /regex/)</span>
+            <input id="searchInput" type="search" placeholder="message, exception, correlation ID, path, /timeout|refused/ ..." /></label>
+          <label class="field"><span>Level</span>
+            <select id="levelFilter"><option value="">All levels</option><option value="problems">Errors + warnings</option><option value="fatal">Fatal</option>
+              <option value="error">Error</option><option value="warn">Warning</option><option value="info">Info</option><option value="debug">Debug</option><option value="trace">Trace</option></select></label>
+          <label class="field"><span>Source file</span><select id="sourceFileFilter"><option value="">All files</option></select></label>
+          <label class="field"><span>HTTP status</span>
+            <select id="statusFilter"><option value="">All</option><option value="any">Has HTTP status</option><option value="2xx">2xx Success</option>
+              <option value="3xx">3xx Redirect</option><option value="4xx">4xx Client error</option><option value="5xx">5xx Server error</option></select></label>
+          <label class="field"><span>Endpoint</span><select id="endpointFilter"><option value="">All endpoints</option></select></label>
+          <label class="field"><span>Min duration (ms)</span><input id="minDuration" type="number" min="0" placeholder="e.g. 500" /></label>
+          <label class="field"><span>From</span><input id="fromTime" type="datetime-local" step="1" /></label>
+          <label class="field"><span>To</span><input id="toTime" type="datetime-local" step="1" /></label>
+          <label class="field"><span>Exception type</span><select id="excFilter"><option value="">All</option></select></label>
+          <label class="field checkbox-field"><input id="maskToggle" type="checkbox" checked /><span>Mask National ID / mobile</span></label>
+        </div>
+      </section>
+
+      <section class="panel rps-timeline-panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">⚡ TIMELINE</p><h2>Entries over time</h2><p class="muted" id="timelineInfo">Load log files to see the timeline</p></div>
+          <div class="rps-controls">
+            <label class="field"><span>Resolution</span>
+              <select id="resolution"><option value="auto" selected>Auto</option><option value="1">1 second</option><option value="10">10 seconds</option>
+                <option value="60">1 minute</option><option value="300">5 minutes</option><option value="900">15 minutes</option><option value="3600">1 hour</option><option value="86400">1 day</option></select></label>
+          </div>
+        </div>
+        <div class="rps-chart-container"><canvas id="timelineChart"></canvas></div>
+        <div class="rps-legend">
+          <span class="rps-legend-item"><span class="rps-dot rps-dot-total"></span> All entries</span>
+          <span class="rps-legend-item"><span class="rps-dot rps-dot-peak"></span> Errors</span>
+          <span class="rps-legend-item"><span class="rps-dot rps-dot-check"></span> Warnings</span>
+        </div>
+      </section>
+
+      <section class="insights-grid three">
+        <article class="panel">
+          <div class="panel-heading compact"><div><p class="eyebrow">LEVELS</p><h2>Severity distribution</h2></div></div>
+          <div id="levelBuckets" class="bucket-list"><p class="empty-state">No data.</p></div>
+          <div class="panel-heading compact top-gap"><div><p class="eyebrow">DISTRIBUTION</p><h2>Response time buckets</h2></div></div>
+          <div id="durationBuckets" class="bucket-list"><p class="empty-state">No durations in the current filter.</p></div>
+        </article>
+        <article class="panel">
+          <div class="panel-heading compact"><div><p class="eyebrow">ROOT CAUSES</p><h2>Top error patterns</h2></div></div>
+          <div id="patternList" class="summary-list"><p class="empty-state">No errors in the current filter 🎉</p></div>
+        </article>
+        <article class="panel">
+          <div class="panel-heading compact"><div><p class="eyebrow">EXCEPTIONS</p><h2>Exception types</h2></div></div>
+          <div id="excList" class="summary-list"><p class="empty-state">No exceptions.</p></div>
+          <div class="panel-heading compact top-gap"><div><p class="eyebrow">HTTP</p><h2>Status codes</h2></div></div>
+          <div id="statusList" class="bucket-list"><p class="empty-state">No HTTP data.</p></div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">ENDPOINTS</p><h2>Endpoint summary</h2></div>
+        </div>
+        <div class="table-wrap">
+          <table><thead><tr class="sort-row">
+            <th data-esort="ep">Endpoint <span class="sort-indicator">↕</span></th><th data-esort="count">Requests <span class="sort-indicator active">↓</span></th>
+            <th data-esort="avg">Avg <span class="sort-indicator">↕</span></th><th data-esort="p95">P95 <span class="sort-indicator">↕</span></th>
+            <th data-esort="max">Max <span class="sort-indicator">↕</span></th><th data-esort="errRate">Errors % <span class="sort-indicator">↕</span></th><th></th>
+          </tr></thead><tbody id="endpointBody"><tr><td colspan="7" class="empty-cell">No HTTP requests detected.</td></tr></tbody></table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">SLOWEST</p><h2>Top slow entries</h2></div>
+          <select id="topCount" class="small-select"><option value="5">Top 5</option><option value="10" selected>Top 10</option><option value="20">Top 20</option><option value="50">Top 50</option></select>
+        </div>
+        <div class="table-wrap"><table><thead><tr><th>#</th><th>Time</th><th>Duration</th><th>Level</th><th>HTTP</th><th>Endpoint / message</th><th>Correlation ID</th><th>File</th><th></th></tr></thead>
+          <tbody id="slowestBody"><tr><td colspan="9" class="empty-cell">No durations detected.</td></tr></tbody></table></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">ENTRY EXPLORER</p><h2>All parsed entries</h2><p id="resultCount" class="muted">0 entries</p></div>
+          <div class="table-actions">
+            <button id="copyIdsButton" class="button ghost" type="button">Copy correlation IDs</button>
+            <button id="exportCsvButton" class="button secondary" type="button">Export filtered CSV</button>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table class="requests-table">
+            <thead>
+              <tr class="sort-row">
+                <th data-sort="ts">Time <span class="sort-indicator active">↑</span></th>
+                <th data-sort="level">Level <span class="sort-indicator">↕</span></th>
+                <th data-sort="msg">Message <span class="sort-indicator">↕</span></th>
+                <th data-sort="dur">Duration <span class="sort-indicator">↕</span></th>
+                <th data-sort="status">HTTP <span class="sort-indicator">↕</span></th>
+                <th data-sort="cid">Correlation ID <span class="sort-indicator">↕</span></th>
+                <th data-sort="file">File <span class="sort-indicator">↕</span></th>
+                <th></th>
+              </tr>
+              <tr class="filter-row">
+                <th><input type="text" class="col-filter" data-cf="time" placeholder="Filter..." /></th>
+                <th><input type="text" class="col-filter" data-cf="level" placeholder="Filter..." /></th>
+                <th><input type="text" class="col-filter" data-cf="msg" placeholder="Filter..." /></th>
+                <th><input type="text" class="col-filter" data-cf="dur" placeholder="Filter..." /></th>
+                <th><input type="text" class="col-filter" data-cf="status" placeholder="Filter..." /></th>
+                <th><input type="text" class="col-filter" data-cf="cid" placeholder="Filter..." /></th>
+                <th><input type="text" class="col-filter" data-cf="file" placeholder="Filter..." /></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="entriesBody"><tr><td colspan="8" class="empty-cell">Choose log files to start analyzing.</td></tr></tbody>
+          </table>
+        </div>
+        <div class="pagination">
+          <button id="previousPage" class="button ghost" type="button">Previous</button>
+          <span id="pageInfo">Page 1 of 1</span>
+          <button id="nextPage" class="button ghost" type="button">Next</button>
+          <label>Rows <select id="pageSize"><option value="25">25</option><option value="50" selected>50</option><option value="100">100</option><option value="250">250</option></select></label>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================================================== SEARCH TAB -->
+    <main id="tab-search" class="tab-page hidden">
+      <section class="panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">GLOBAL SEARCH</p><h2>Search inside every log file</h2>
+            <p class="muted">Searches the files on disk directly (newest first). Use it to trace a correlation ID, national ID, error text or exception across all applications.</p></div>
+        </div>
+        <div class="filters-grid">
+          <label class="field wide"><span>Text or regular expression</span><input id="gSearch" type="search" placeholder="e.g. 8f2a-11aa-bb  or  Timeout|refused" /></label>
+          <label class="field"><span>Scope</span>
+            <select id="gScope"><option value="filtered">Files matching the “Log files” filters</option><option value="all">All indexed files</option><option value="loaded">Files loaded in the Analyzer</option></select></label>
+          <label class="field"><span>Max results</span><select id="gMax"><option>500</option><option selected>2000</option><option>10000</option></select></label>
+          <label class="field checkbox-field"><input id="gRegex" type="checkbox" /><span>Regular expression</span></label>
+          <label class="field checkbox-field"><input id="gCase" type="checkbox" /><span>Case sensitive</span></label>
+          <div class="field"><span>&nbsp;</span><button id="gGo" class="button primary" type="button">Search</button></div>
+        </div>
+        <p id="gInfo" class="muted top-gap"></p>
+      </section>
+      <section class="panel">
+        <div class="panel-heading">
+          <div><p class="eyebrow">RESULTS</p><h2>Matches</h2><p id="gCount" class="muted">0 matches</p></div>
+          <div class="table-actions"><button id="gAnalyze" class="button secondary" type="button">Analyze files with matches</button>
+            <button id="gExport" class="button ghost" type="button">Export CSV</button></div>
+        </div>
+        <div id="gFiles" class="file-chips"></div>
+        <div class="table-wrap top-gap"><table><thead><tr><th>File</th><th>Line</th><th>Text</th><th></th></tr></thead>
+          <tbody id="gBody"><tr><td colspan="4" class="empty-cell">Type something and press Search.</td></tr></tbody></table></div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="detailsDialog">
+    <div class="dialog-header">
+      <div><p class="eyebrow" id="dialogEyebrow">ENTRY DETAILS</p><h2 id="dialogTitle">Entry</h2></div>
+      <button id="closeDialog" class="icon-button" type="button" aria-label="Close">×</button>
+    </div>
+    <div id="dialogContent" class="dialog-content"></div>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script>window.ULM_STATIC = true;</script>
+  <script src="parser.js"></script>
+  <script src="app.js"></script>
+  <script>
+  // Portfolio demo: no backend here, so load the bundled sample logs straight into the analyzer.
+  (async () => {
+    const names = ["payments-api/payments-20261114.log", "iis/u_ex261114.log", "identity/identity.log"];
+    const files = await Promise.all(names.map(async n => new File([await (await fetch("samples/" + n)).blob()], n.split("/").pop(), { type: "text/plain" })));
+    window.ULM.showTab("analyze");
+    window.ULM.loadLocalFiles(files);
+    document.querySelector('[data-tab="files"]').style.display = "none";
+    document.querySelector('[data-tab="search"]').style.display = "none";
+  })();
+  </script>
+</body>
+</html>

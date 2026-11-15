@@ -1,0 +1,803 @@
+2026-11-14 09:00:00.323 +02:00 [ERR] Payment gateway call failed for order 80239
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:00:00.323 +02:00 [INF] HTTP POST /api/payments/7468 responded 500 in 285.1 ms
+2026-11-14 09:00:11.582 +02:00 [INF] HTTP GET /api/payments/1614 responded 200 in 74.5 ms
+2026-11-14 09:00:22.551 +02:00 [INF] HTTP GET /api/payments responded 404 in 284.5 ms
+2026-11-14 09:00:33.577 +02:00 [ERR] Payment gateway call failed for order 27455
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:00:33.577 +02:00 [INF] HTTP GET /api/clients/1812 responded 500 in 871.0 ms
+2026-11-14 09:00:44.144 +02:00 [INF] HTTP POST /api/payments responded 200 in 33.6 ms
+2026-11-14 09:00:55.571 +02:00 [INF] HTTP GET /api/payments/7101 responded 200 in 170.6 ms
+2026-11-14 09:01:06.619 +02:00 [INF] HTTP GET /api/clients/9711 responded 201 in 176.9 ms
+2026-11-14 09:01:17.453 +02:00 [INF] HTTP GET /api/refunds responded 200 in 27.3 ms
+2026-11-14 09:01:28.300 +02:00 [INF] HTTP POST /api/clients/6627 responded 404 in 294.1 ms
+2026-11-14 09:01:39.118 +02:00 [INF] HTTP GET /api/clients/3702 responded 201 in 128.2 ms
+2026-11-14 09:01:50.962 +02:00 [INF] HTTP GET /api/payments responded 404 in 150.5 ms
+2026-11-14 09:02:01.796 +02:00 [INF] HTTP GET /api/payments responded 400 in 22.3 ms
+2026-11-14 09:02:12.731 +02:00 [INF] HTTP GET /api/refunds responded 400 in 106.1 ms
+2026-11-14 09:02:23.940 +02:00 [INF] HTTP POST /api/refunds responded 200 in 67.8 ms
+2026-11-14 09:02:34.287 +02:00 [INF] HTTP GET /api/payments/7519 responded 201 in 26.9 ms
+2026-11-14 09:02:45.449 +02:00 [INF] HTTP GET /api/refunds responded 200 in 212.8 ms
+2026-11-14 09:02:56.986 +02:00 [WRN] Slow database query on Orders took 1109 ms
+2026-11-14 09:02:56.986 +02:00 [INF] HTTP GET /api/clients/4780 responded 200 in 71.9 ms
+2026-11-14 09:03:07.233 +02:00 [INF] HTTP GET /api/clients/3987 responded 200 in 127.4 ms
+2026-11-14 09:03:18.369 +02:00 [INF] HTTP POST /api/refunds responded 404 in 197.5 ms
+2026-11-14 09:03:29.739 +02:00 [INF] HTTP GET /api/clients/7428 responded 200 in 146.0 ms
+2026-11-14 09:03:40.400 +02:00 [INF] HTTP GET /api/payments/2103 responded 200 in 104.0 ms
+2026-11-14 09:03:51.052 +02:00 [INF] HTTP POST /api/payments responded 200 in 185.3 ms
+2026-11-14 09:04:02.070 +02:00 [INF] HTTP GET /api/payments/7164 responded 200 in 181.9 ms
+2026-11-14 09:04:13.474 +02:00 [INF] HTTP GET /api/payments responded 200 in 28.5 ms
+2026-11-14 09:04:24.102 +02:00 [INF] HTTP GET /api/refunds responded 200 in 156.4 ms
+2026-11-14 09:04:35.205 +02:00 [INF] HTTP POST /api/refunds responded 200 in 228.2 ms
+2026-11-14 09:04:46.298 +02:00 [INF] HTTP POST /api/payments responded 200 in 108.6 ms
+2026-11-14 09:04:57.222 +02:00 [INF] HTTP POST /api/refunds responded 200 in 242.4 ms
+2026-11-14 09:05:08.818 +02:00 [INF] HTTP POST /api/payments/4275 responded 400 in 11.6 ms
+2026-11-14 09:05:19.027 +02:00 [INF] HTTP GET /api/refunds responded 404 in 287.1 ms
+2026-11-14 09:05:30.447 +02:00 [INF] HTTP GET /api/refunds responded 200 in 142.6 ms
+2026-11-14 09:05:41.337 +02:00 [INF] HTTP GET /api/clients/1031 responded 200 in 240.5 ms
+2026-11-14 09:05:52.084 +02:00 [INF] HTTP POST /api/payments responded 201 in 267.0 ms
+2026-11-14 09:06:03.433 +02:00 [INF] HTTP POST /api/refunds responded 201 in 223.8 ms
+2026-11-14 09:06:14.084 +02:00 [ERR] Payment gateway call failed for order 87438
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:06:14.084 +02:00 [INF] HTTP GET /api/payments/3785 responded 500 in 2714.8 ms
+2026-11-14 09:06:25.806 +02:00 [INF] HTTP POST /api/payments/8771 responded 200 in 166.0 ms
+2026-11-14 09:06:36.130 +02:00 [INF] HTTP POST /api/payments responded 200 in 131.8 ms
+2026-11-14 09:06:47.871 +02:00 [INF] HTTP GET /api/payments/1458 responded 404 in 74.4 ms
+2026-11-14 09:06:58.586 +02:00 [INF] HTTP GET /api/refunds responded 200 in 273.3 ms
+2026-11-14 09:07:09.353 +02:00 [INF] HTTP GET /api/clients/9466 responded 404 in 41.8 ms
+2026-11-14 09:07:20.151 +02:00 [INF] HTTP GET /api/payments responded 200 in 54.2 ms
+2026-11-14 09:07:31.473 +02:00 [INF] HTTP GET /api/payments responded 404 in 168.0 ms
+2026-11-14 09:07:42.784 +02:00 [INF] HTTP GET /api/payments responded 200 in 232.4 ms
+2026-11-14 09:07:53.507 +02:00 [INF] HTTP GET /api/payments responded 404 in 183.0 ms
+2026-11-14 09:08:04.199 +02:00 [INF] HTTP POST /api/refunds responded 201 in 153.8 ms
+2026-11-14 09:08:15.247 +02:00 [INF] HTTP GET /api/refunds responded 200 in 119.5 ms
+2026-11-14 09:08:26.315 +02:00 [INF] HTTP GET /api/payments/8017 responded 200 in 235.8 ms
+2026-11-14 09:08:37.897 +02:00 [INF] HTTP GET /api/payments/6999 responded 200 in 290.4 ms
+2026-11-14 09:08:48.219 +02:00 [INF] HTTP GET /api/payments responded 400 in 250.2 ms
+2026-11-14 09:08:59.161 +02:00 [INF] HTTP GET /api/clients/9447 responded 200 in 108.9 ms
+2026-11-14 09:09:10.092 +02:00 [INF] HTTP GET /api/refunds responded 201 in 211.8 ms
+2026-11-14 09:09:21.384 +02:00 [INF] HTTP GET /api/refunds responded 200 in 291.6 ms
+2026-11-14 09:09:32.104 +02:00 [INF] HTTP GET /api/refunds responded 200 in 83.3 ms
+2026-11-14 09:09:43.129 +02:00 [INF] HTTP GET /api/clients/5237 responded 404 in 172.5 ms
+2026-11-14 09:09:54.700 +02:00 [INF] HTTP GET /api/payments responded 200 in 129.3 ms
+2026-11-14 09:10:05.072 +02:00 [WRN] Slow database query on Orders took 1255 ms
+2026-11-14 09:10:05.072 +02:00 [INF] HTTP GET /api/payments responded 200 in 22.8 ms
+2026-11-14 09:10:16.862 +02:00 [INF] HTTP GET /api/clients/1189 responded 201 in 278.2 ms
+2026-11-14 09:10:27.267 +02:00 [INF] HTTP POST /api/payments/1707 responded 200 in 290.9 ms
+2026-11-14 09:10:38.261 +02:00 [INF] HTTP GET /api/payments/4305 responded 404 in 228.6 ms
+2026-11-14 09:10:49.289 +02:00 [INF] HTTP GET /api/payments/5432 responded 200 in 14.0 ms
+2026-11-14 09:11:00.018 +02:00 [INF] HTTP GET /api/payments/9425 responded 201 in 34.6 ms
+2026-11-14 09:11:11.818 +02:00 [INF] HTTP POST /api/clients/9110 responded 201 in 291.2 ms
+2026-11-14 09:11:22.307 +02:00 [INF] HTTP GET /api/payments/4761 responded 400 in 219.5 ms
+2026-11-14 09:11:33.139 +02:00 [ERR] Payment gateway call failed for order 91978
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:11:33.139 +02:00 [INF] HTTP GET /api/refunds responded 500 in 2223.4 ms
+2026-11-14 09:11:44.255 +02:00 [INF] HTTP GET /api/payments/1907 responded 201 in 261.5 ms
+2026-11-14 09:11:55.670 +02:00 [INF] HTTP POST /api/refunds responded 201 in 58.0 ms
+2026-11-14 09:12:06.269 +02:00 [INF] HTTP GET /api/payments responded 404 in 99.1 ms
+2026-11-14 09:12:17.034 +02:00 [INF] HTTP GET /api/refunds responded 200 in 116.3 ms
+2026-11-14 09:12:28.474 +02:00 [INF] HTTP POST /api/payments/5066 responded 200 in 81.5 ms
+2026-11-14 09:12:39.089 +02:00 [ERR] Payment gateway call failed for order 49877
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:12:39.089 +02:00 [INF] HTTP GET /api/clients/1682 responded 500 in 1890.1 ms
+2026-11-14 09:12:50.084 +02:00 [INF] HTTP GET /api/payments/7381 responded 201 in 47.4 ms
+2026-11-14 09:13:01.724 +02:00 [INF] HTTP POST /api/payments/1717 responded 400 in 130.5 ms
+2026-11-14 09:13:12.701 +02:00 [INF] HTTP POST /api/payments/9581 responded 200 in 248.4 ms
+2026-11-14 09:13:23.584 +02:00 [ERR] Payment gateway call failed for order 93508
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:13:23.584 +02:00 [INF] HTTP GET /api/payments/2394 responded 500 in 1084.0 ms
+2026-11-14 09:13:34.104 +02:00 [ERR] Payment gateway call failed for order 79657
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:13:34.104 +02:00 [INF] HTTP POST /api/clients/1831 responded 500 in 2043.0 ms
+2026-11-14 09:13:45.489 +02:00 [INF] HTTP GET /api/payments responded 404 in 269.7 ms
+2026-11-14 09:13:56.091 +02:00 [INF] HTTP GET /api/payments responded 200 in 72.7 ms
+2026-11-14 09:14:07.756 +02:00 [INF] HTTP GET /api/payments/8542 responded 200 in 145.3 ms
+2026-11-14 09:14:18.683 +02:00 [INF] HTTP GET /api/payments responded 200 in 78.4 ms
+2026-11-14 09:14:29.743 +02:00 [INF] HTTP GET /api/refunds responded 201 in 82.8 ms
+2026-11-14 09:14:40.672 +02:00 [INF] HTTP GET /api/payments/9021 responded 200 in 141.0 ms
+2026-11-14 09:14:51.466 +02:00 [INF] HTTP GET /api/payments responded 200 in 281.1 ms
+2026-11-14 09:15:02.017 +02:00 [INF] HTTP POST /api/clients/2252 responded 201 in 298.2 ms
+2026-11-14 09:15:13.386 +02:00 [WRN] Slow database query on Orders took 2330 ms
+2026-11-14 09:15:13.386 +02:00 [INF] HTTP POST /api/payments/2222 responded 200 in 158.6 ms
+2026-11-14 09:15:24.952 +02:00 [INF] HTTP GET /api/payments/9335 responded 400 in 111.5 ms
+2026-11-14 09:15:35.497 +02:00 [INF] HTTP GET /api/clients/7456 responded 201 in 205.4 ms
+2026-11-14 09:15:46.405 +02:00 [INF] HTTP GET /api/payments/7818 responded 200 in 252.5 ms
+2026-11-14 09:15:57.001 +02:00 [INF] HTTP GET /api/refunds responded 200 in 214.8 ms
+2026-11-14 09:16:08.901 +02:00 [WRN] Slow database query on Orders took 1599 ms
+2026-11-14 09:16:08.901 +02:00 [INF] HTTP GET /api/refunds responded 200 in 299.6 ms
+2026-11-14 09:16:19.589 +02:00 [INF] HTTP GET /api/refunds responded 200 in 33.2 ms
+2026-11-14 09:16:30.834 +02:00 [INF] HTTP GET /api/refunds responded 201 in 154.8 ms
+2026-11-14 09:16:41.189 +02:00 [INF] HTTP GET /api/refunds responded 400 in 121.8 ms
+2026-11-14 09:16:52.875 +02:00 [INF] HTTP GET /api/payments/2320 responded 201 in 136.9 ms
+2026-11-14 09:17:03.752 +02:00 [INF] HTTP GET /api/refunds responded 404 in 40.8 ms
+2026-11-14 09:17:14.472 +02:00 [INF] HTTP GET /api/refunds responded 400 in 293.0 ms
+2026-11-14 09:17:25.260 +02:00 [INF] HTTP GET /api/payments/5928 responded 201 in 38.6 ms
+2026-11-14 09:17:36.643 +02:00 [INF] HTTP POST /api/payments responded 201 in 166.5 ms
+2026-11-14 09:17:47.452 +02:00 [INF] HTTP GET /api/refunds responded 200 in 75.5 ms
+2026-11-14 09:17:58.174 +02:00 [INF] HTTP GET /api/payments responded 404 in 63.0 ms
+2026-11-14 09:18:09.020 +02:00 [INF] HTTP GET /api/clients/7272 responded 200 in 114.9 ms
+2026-11-14 09:18:20.338 +02:00 [INF] HTTP GET /api/payments responded 200 in 40.4 ms
+2026-11-14 09:18:31.503 +02:00 [INF] HTTP GET /api/payments/2517 responded 201 in 121.7 ms
+2026-11-14 09:18:42.445 +02:00 [ERR] Payment gateway call failed for order 72032
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:18:42.445 +02:00 [INF] HTTP GET /api/refunds responded 500 in 2904.9 ms
+2026-11-14 09:18:53.489 +02:00 [INF] HTTP POST /api/payments responded 201 in 76.8 ms
+2026-11-14 09:19:04.109 +02:00 [INF] HTTP POST /api/payments/3491 responded 200 in 282.6 ms
+2026-11-14 09:19:15.721 +02:00 [INF] HTTP POST /api/clients/2392 responded 200 in 235.3 ms
+2026-11-14 09:19:26.232 +02:00 [INF] HTTP GET /api/payments responded 404 in 192.0 ms
+2026-11-14 09:19:37.698 +02:00 [INF] HTTP GET /api/payments responded 404 in 59.9 ms
+2026-11-14 09:19:48.260 +02:00 [INF] HTTP POST /api/payments responded 201 in 85.7 ms
+2026-11-14 09:19:59.316 +02:00 [INF] HTTP POST /api/payments/8787 responded 200 in 11.7 ms
+2026-11-14 09:20:10.411 +02:00 [INF] HTTP GET /api/refunds responded 400 in 195.2 ms
+2026-11-14 09:20:21.081 +02:00 [INF] HTTP GET /api/payments/7952 responded 200 in 209.7 ms
+2026-11-14 09:20:32.718 +02:00 [ERR] Payment gateway call failed for order 48287
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:20:32.718 +02:00 [INF] HTTP GET /api/refunds responded 500 in 2218.2 ms
+2026-11-14 09:20:43.504 +02:00 [INF] HTTP GET /api/payments/9121 responded 200 in 71.6 ms
+2026-11-14 09:20:54.221 +02:00 [INF] HTTP POST /api/refunds responded 200 in 269.3 ms
+2026-11-14 09:21:05.485 +02:00 [ERR] Payment gateway call failed for order 13097
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:21:05.485 +02:00 [INF] HTTP GET /api/payments responded 500 in 2922.4 ms
+2026-11-14 09:21:16.141 +02:00 [INF] HTTP GET /api/payments responded 400 in 265.4 ms
+2026-11-14 09:21:27.732 +02:00 [INF] HTTP GET /api/payments responded 400 in 281.0 ms
+2026-11-14 09:21:38.746 +02:00 [INF] HTTP POST /api/payments responded 200 in 295.5 ms
+2026-11-14 09:21:49.442 +02:00 [INF] HTTP GET /api/payments responded 200 in 127.8 ms
+2026-11-14 09:22:00.885 +02:00 [INF] HTTP GET /api/payments/7228 responded 200 in 247.1 ms
+2026-11-14 09:22:11.432 +02:00 [INF] HTTP GET /api/payments responded 201 in 60.3 ms
+2026-11-14 09:22:22.364 +02:00 [INF] HTTP POST /api/clients/1496 responded 400 in 230.7 ms
+2026-11-14 09:22:33.040 +02:00 [INF] HTTP GET /api/payments responded 200 in 79.3 ms
+2026-11-14 09:22:44.747 +02:00 [INF] HTTP GET /api/refunds responded 404 in 15.9 ms
+2026-11-14 09:22:55.746 +02:00 [ERR] Payment gateway call failed for order 88062
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:22:55.746 +02:00 [INF] HTTP GET /api/refunds responded 500 in 2749.6 ms
+2026-11-14 09:23:06.633 +02:00 [INF] HTTP GET /api/payments responded 400 in 287.2 ms
+2026-11-14 09:23:17.953 +02:00 [INF] HTTP GET /api/clients/5113 responded 200 in 278.6 ms
+2026-11-14 09:23:28.182 +02:00 [INF] HTTP POST /api/refunds responded 200 in 139.9 ms
+2026-11-14 09:23:39.783 +02:00 [INF] HTTP GET /api/payments responded 200 in 76.5 ms
+2026-11-14 09:23:50.064 +02:00 [INF] HTTP POST /api/payments responded 200 in 294.1 ms
+2026-11-14 09:24:01.883 +02:00 [WRN] Slow database query on Orders took 997 ms
+2026-11-14 09:24:01.883 +02:00 [INF] HTTP POST /api/payments responded 200 in 128.1 ms
+2026-11-14 09:24:12.988 +02:00 [INF] HTTP GET /api/clients/3837 responded 201 in 187.2 ms
+2026-11-14 09:24:23.674 +02:00 [INF] HTTP GET /api/payments responded 200 in 113.8 ms
+2026-11-14 09:24:34.738 +02:00 [INF] HTTP GET /api/payments/8199 responded 200 in 48.5 ms
+2026-11-14 09:24:45.884 +02:00 [INF] HTTP GET /api/payments/6346 responded 200 in 153.7 ms
+2026-11-14 09:24:56.231 +02:00 [INF] HTTP GET /api/payments responded 201 in 265.2 ms
+2026-11-14 09:25:07.231 +02:00 [INF] HTTP GET /api/clients/7125 responded 200 in 38.4 ms
+2026-11-14 09:25:18.189 +02:00 [INF] HTTP GET /api/payments/2230 responded 200 in 136.4 ms
+2026-11-14 09:25:29.259 +02:00 [INF] HTTP POST /api/payments responded 404 in 106.9 ms
+2026-11-14 09:25:40.037 +02:00 [INF] HTTP GET /api/refunds responded 200 in 14.4 ms
+2026-11-14 09:25:51.732 +02:00 [INF] HTTP GET /api/payments/1186 responded 200 in 58.0 ms
+2026-11-14 09:26:02.312 +02:00 [INF] HTTP GET /api/payments/1515 responded 200 in 124.2 ms
+2026-11-14 09:26:13.795 +02:00 [INF] HTTP GET /api/payments/9749 responded 201 in 209.5 ms
+2026-11-14 09:26:24.409 +02:00 [INF] HTTP GET /api/refunds responded 200 in 224.4 ms
+2026-11-14 09:26:35.883 +02:00 [INF] HTTP GET /api/clients/7823 responded 200 in 194.4 ms
+2026-11-14 09:26:46.390 +02:00 [INF] HTTP GET /api/clients/4336 responded 200 in 128.9 ms
+2026-11-14 09:26:57.820 +02:00 [INF] HTTP GET /api/clients/6975 responded 200 in 7.4 ms
+2026-11-14 09:27:08.551 +02:00 [INF] HTTP POST /api/clients/2458 responded 200 in 222.0 ms
+2026-11-14 09:27:19.171 +02:00 [INF] HTTP GET /api/refunds responded 200 in 35.3 ms
+2026-11-14 09:27:30.490 +02:00 [INF] HTTP GET /api/payments/5941 responded 200 in 292.7 ms
+2026-11-14 09:27:41.482 +02:00 [INF] HTTP GET /api/payments responded 404 in 207.4 ms
+2026-11-14 09:27:52.891 +02:00 [INF] HTTP POST /api/payments/7627 responded 201 in 57.3 ms
+2026-11-14 09:28:03.218 +02:00 [INF] HTTP GET /api/clients/9485 responded 200 in 47.4 ms
+2026-11-14 09:28:14.970 +02:00 [INF] HTTP POST /api/payments/1673 responded 400 in 14.3 ms
+2026-11-14 09:28:25.838 +02:00 [INF] HTTP POST /api/payments responded 400 in 234.1 ms
+2026-11-14 09:28:36.649 +02:00 [INF] HTTP GET /api/refunds responded 200 in 135.7 ms
+2026-11-14 09:28:47.438 +02:00 [INF] HTTP POST /api/payments responded 201 in 72.9 ms
+2026-11-14 09:28:58.763 +02:00 [INF] HTTP GET /api/clients/3942 responded 200 in 41.2 ms
+2026-11-14 09:29:09.430 +02:00 [INF] HTTP POST /api/payments responded 200 in 15.1 ms
+2026-11-14 09:29:20.130 +02:00 [ERR] Payment gateway call failed for order 76050
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:29:20.130 +02:00 [INF] HTTP GET /api/refunds responded 500 in 2684.9 ms
+2026-11-14 09:29:31.652 +02:00 [INF] HTTP GET /api/payments/1423 responded 400 in 208.7 ms
+2026-11-14 09:29:42.109 +02:00 [INF] HTTP GET /api/payments/9058 responded 200 in 206.8 ms
+2026-11-14 09:29:53.721 +02:00 [INF] HTTP GET /api/payments/2073 responded 200 in 50.2 ms
+2026-11-14 09:30:04.896 +02:00 [INF] HTTP GET /api/refunds responded 201 in 64.9 ms
+2026-11-14 09:30:15.262 +02:00 [ERR] Payment gateway call failed for order 33867
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:30:15.262 +02:00 [INF] HTTP GET /api/payments/6227 responded 500 in 1212.2 ms
+2026-11-14 09:30:26.636 +02:00 [INF] HTTP GET /api/refunds responded 200 in 37.2 ms
+2026-11-14 09:30:37.530 +02:00 [INF] HTTP POST /api/refunds responded 400 in 265.1 ms
+2026-11-14 09:30:48.104 +02:00 [INF] HTTP GET /api/clients/7086 responded 200 in 174.5 ms
+2026-11-14 09:30:59.360 +02:00 [INF] HTTP GET /api/payments responded 400 in 287.5 ms
+2026-11-14 09:31:10.296 +02:00 [INF] HTTP POST /api/refunds responded 404 in 278.8 ms
+2026-11-14 09:31:21.895 +02:00 [INF] HTTP GET /api/payments responded 404 in 188.8 ms
+2026-11-14 09:31:32.417 +02:00 [INF] HTTP GET /api/refunds responded 404 in 197.0 ms
+2026-11-14 09:31:43.022 +02:00 [INF] HTTP GET /api/payments responded 200 in 161.6 ms
+2026-11-14 09:31:54.413 +02:00 [INF] HTTP GET /api/refunds responded 201 in 50.1 ms
+2026-11-14 09:32:05.014 +02:00 [WRN] Slow database query on Orders took 2107 ms
+2026-11-14 09:32:05.014 +02:00 [INF] HTTP GET /api/payments/3446 responded 200 in 46.0 ms
+2026-11-14 09:32:16.665 +02:00 [INF] HTTP GET /api/refunds responded 200 in 194.5 ms
+2026-11-14 09:32:27.562 +02:00 [INF] HTTP POST /api/refunds responded 400 in 149.4 ms
+2026-11-14 09:32:38.165 +02:00 [INF] HTTP GET /api/payments responded 201 in 58.1 ms
+2026-11-14 09:32:49.159 +02:00 [INF] HTTP POST /api/payments responded 200 in 45.3 ms
+2026-11-14 09:33:00.199 +02:00 [INF] HTTP POST /api/clients/3861 responded 200 in 188.9 ms
+2026-11-14 09:33:11.994 +02:00 [INF] HTTP GET /api/clients/9821 responded 201 in 224.3 ms
+2026-11-14 09:33:22.465 +02:00 [INF] HTTP GET /api/clients/3873 responded 200 in 72.0 ms
+2026-11-14 09:33:33.038 +02:00 [ERR] Payment gateway call failed for order 93344
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:33:33.038 +02:00 [INF] HTTP POST /api/refunds responded 500 in 1662.7 ms
+2026-11-14 09:33:44.436 +02:00 [INF] HTTP POST /api/refunds responded 200 in 28.4 ms
+2026-11-14 09:33:55.507 +02:00 [INF] HTTP GET /api/payments/5265 responded 200 in 283.6 ms
+2026-11-14 09:34:06.746 +02:00 [INF] HTTP GET /api/refunds responded 200 in 115.7 ms
+2026-11-14 09:34:17.851 +02:00 [INF] HTTP POST /api/clients/8735 responded 200 in 132.9 ms
+2026-11-14 09:34:28.724 +02:00 [INF] HTTP GET /api/refunds responded 200 in 170.9 ms
+2026-11-14 09:34:39.171 +02:00 [INF] HTTP GET /api/payments responded 200 in 105.4 ms
+2026-11-14 09:34:50.141 +02:00 [INF] HTTP GET /api/payments responded 400 in 191.3 ms
+2026-11-14 09:35:01.697 +02:00 [INF] HTTP POST /api/payments responded 200 in 245.8 ms
+2026-11-14 09:35:12.819 +02:00 [INF] HTTP GET /api/payments responded 200 in 36.3 ms
+2026-11-14 09:35:23.034 +02:00 [WRN] Slow database query on Orders took 1000 ms
+2026-11-14 09:35:23.034 +02:00 [INF] HTTP GET /api/payments responded 200 in 238.2 ms
+2026-11-14 09:35:34.646 +02:00 [INF] HTTP GET /api/refunds responded 200 in 107.2 ms
+2026-11-14 09:35:45.930 +02:00 [INF] HTTP GET /api/payments responded 404 in 152.6 ms
+2026-11-14 09:35:56.851 +02:00 [INF] HTTP GET /api/payments responded 200 in 106.0 ms
+2026-11-14 09:36:07.704 +02:00 [INF] HTTP POST /api/payments/2489 responded 200 in 132.5 ms
+2026-11-14 09:36:18.523 +02:00 [INF] HTTP GET /api/refunds responded 200 in 149.0 ms
+2026-11-14 09:36:29.796 +02:00 [INF] HTTP POST /api/payments/9103 responded 404 in 80.4 ms
+2026-11-14 09:36:40.943 +02:00 [INF] HTTP POST /api/refunds responded 200 in 35.6 ms
+2026-11-14 09:36:51.636 +02:00 [INF] HTTP POST /api/payments responded 200 in 189.5 ms
+2026-11-14 09:37:02.355 +02:00 [WRN] Slow database query on Orders took 2122 ms
+2026-11-14 09:37:02.355 +02:00 [INF] HTTP POST /api/clients/7465 responded 200 in 10.5 ms
+2026-11-14 09:37:13.206 +02:00 [INF] HTTP POST /api/refunds responded 201 in 294.8 ms
+2026-11-14 09:37:24.630 +02:00 [INF] HTTP POST /api/clients/3078 responded 400 in 226.6 ms
+2026-11-14 09:37:35.646 +02:00 [INF] HTTP POST /api/refunds responded 201 in 199.6 ms
+2026-11-14 09:37:46.741 +02:00 [INF] HTTP GET /api/payments/8588 responded 200 in 175.0 ms
+2026-11-14 09:37:57.126 +02:00 [INF] HTTP POST /api/clients/4898 responded 200 in 227.2 ms
+2026-11-14 09:38:08.826 +02:00 [INF] HTTP GET /api/payments/3555 responded 404 in 158.1 ms
+2026-11-14 09:38:19.160 +02:00 [INF] HTTP GET /api/refunds responded 400 in 298.5 ms
+2026-11-14 09:38:30.164 +02:00 [INF] HTTP GET /api/payments responded 200 in 239.1 ms
+2026-11-14 09:38:41.733 +02:00 [INF] HTTP GET /api/clients/5486 responded 200 in 86.4 ms
+2026-11-14 09:38:52.885 +02:00 [INF] HTTP GET /api/clients/1555 responded 201 in 209.0 ms
+2026-11-14 09:39:03.500 +02:00 [INF] HTTP GET /api/refunds responded 404 in 222.3 ms
+2026-11-14 09:39:14.005 +02:00 [INF] HTTP POST /api/payments/8045 responded 400 in 195.2 ms
+2026-11-14 09:39:25.845 +02:00 [INF] HTTP POST /api/payments/3973 responded 201 in 96.0 ms
+2026-11-14 09:39:36.628 +02:00 [INF] HTTP GET /api/payments responded 400 in 214.7 ms
+2026-11-14 09:39:47.156 +02:00 [ERR] Payment gateway call failed for order 63653
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:39:47.156 +02:00 [INF] HTTP GET /api/clients/8909 responded 500 in 1556.2 ms
+2026-11-14 09:39:58.661 +02:00 [INF] HTTP GET /api/payments/6374 responded 201 in 272.7 ms
+2026-11-14 09:40:09.106 +02:00 [INF] HTTP GET /api/refunds responded 200 in 157.2 ms
+2026-11-14 09:40:20.101 +02:00 [INF] HTTP GET /api/clients/9864 responded 404 in 7.8 ms
+2026-11-14 09:40:31.792 +02:00 [INF] HTTP GET /api/refunds responded 201 in 65.4 ms
+2026-11-14 09:40:42.684 +02:00 [INF] HTTP GET /api/clients/9417 responded 404 in 108.6 ms
+2026-11-14 09:40:53.056 +02:00 [WRN] Slow database query on Orders took 953 ms
+2026-11-14 09:40:53.056 +02:00 [INF] HTTP GET /api/refunds responded 200 in 127.3 ms
+2026-11-14 09:41:04.420 +02:00 [INF] HTTP GET /api/refunds responded 400 in 121.9 ms
+2026-11-14 09:41:15.953 +02:00 [INF] HTTP GET /api/payments/7421 responded 200 in 279.0 ms
+2026-11-14 09:41:26.068 +02:00 [INF] HTTP POST /api/payments/8686 responded 200 in 244.9 ms
+2026-11-14 09:41:37.146 +02:00 [INF] HTTP GET /api/clients/8669 responded 400 in 40.2 ms
+2026-11-14 09:41:48.833 +02:00 [INF] HTTP GET /api/refunds responded 400 in 78.3 ms
+2026-11-14 09:41:59.426 +02:00 [INF] HTTP GET /api/payments/8890 responded 200 in 109.3 ms
+2026-11-14 09:42:10.654 +02:00 [INF] HTTP GET /api/refunds responded 400 in 28.4 ms
+2026-11-14 09:42:21.897 +02:00 [ERR] Payment gateway call failed for order 84001
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:42:21.897 +02:00 [INF] HTTP GET /api/payments/5967 responded 500 in 2717.7 ms
+2026-11-14 09:42:32.784 +02:00 [INF] HTTP GET /api/payments/9694 responded 200 in 198.2 ms
+2026-11-14 09:42:43.209 +02:00 [INF] HTTP GET /api/payments responded 404 in 45.4 ms
+2026-11-14 09:42:54.233 +02:00 [INF] HTTP GET /api/clients/6676 responded 201 in 238.1 ms
+2026-11-14 09:43:05.167 +02:00 [INF] HTTP POST /api/payments responded 200 in 149.9 ms
+2026-11-14 09:43:16.213 +02:00 [INF] HTTP POST /api/payments responded 404 in 38.2 ms
+2026-11-14 09:43:27.419 +02:00 [INF] HTTP GET /api/payments/8753 responded 201 in 141.7 ms
+2026-11-14 09:43:38.144 +02:00 [INF] HTTP GET /api/clients/5039 responded 404 in 259.3 ms
+2026-11-14 09:43:49.006 +02:00 [INF] HTTP POST /api/refunds responded 400 in 91.2 ms
+2026-11-14 09:44:00.465 +02:00 [WRN] Slow database query on Orders took 2104 ms
+2026-11-14 09:44:00.465 +02:00 [INF] HTTP POST /api/clients/7861 responded 200 in 110.0 ms
+2026-11-14 09:44:11.646 +02:00 [INF] HTTP POST /api/payments responded 200 in 243.2 ms
+2026-11-14 09:44:22.093 +02:00 [ERR] Payment gateway call failed for order 64472
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:44:22.093 +02:00 [INF] HTTP GET /api/clients/8940 responded 500 in 1877.0 ms
+2026-11-14 09:44:33.338 +02:00 [INF] HTTP GET /api/refunds responded 404 in 231.9 ms
+2026-11-14 09:44:44.210 +02:00 [INF] HTTP GET /api/clients/6602 responded 200 in 248.5 ms
+2026-11-14 09:44:55.292 +02:00 [INF] HTTP GET /api/clients/7614 responded 200 in 262.3 ms
+2026-11-14 09:45:06.344 +02:00 [INF] HTTP GET /api/payments/9064 responded 200 in 214.8 ms
+2026-11-14 09:45:17.127 +02:00 [INF] HTTP GET /api/payments responded 201 in 165.0 ms
+2026-11-14 09:45:28.049 +02:00 [ERR] Payment gateway call failed for order 72266
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:45:28.049 +02:00 [INF] HTTP GET /api/refunds responded 500 in 1827.2 ms
+2026-11-14 09:45:39.658 +02:00 [INF] HTTP POST /api/clients/3409 responded 400 in 180.1 ms
+2026-11-14 09:45:50.680 +02:00 [INF] HTTP POST /api/payments/1646 responded 400 in 229.5 ms
+2026-11-14 09:46:01.101 +02:00 [INF] HTTP GET /api/payments/1605 responded 400 in 7.0 ms
+2026-11-14 09:46:12.871 +02:00 [INF] HTTP POST /api/payments/6068 responded 200 in 57.9 ms
+2026-11-14 09:46:23.034 +02:00 [INF] HTTP POST /api/payments responded 200 in 150.8 ms
+2026-11-14 09:46:34.522 +02:00 [INF] HTTP POST /api/payments responded 201 in 135.6 ms
+2026-11-14 09:46:45.014 +02:00 [INF] HTTP GET /api/clients/3544 responded 404 in 33.3 ms
+2026-11-14 09:46:56.644 +02:00 [ERR] Payment gateway call failed for order 10626
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:46:56.644 +02:00 [INF] HTTP POST /api/payments/3486 responded 500 in 31.0 ms
+2026-11-14 09:47:07.669 +02:00 [INF] HTTP GET /api/payments responded 200 in 84.8 ms
+2026-11-14 09:47:18.568 +02:00 [INF] HTTP GET /api/clients/4070 responded 400 in 214.9 ms
+2026-11-14 09:47:29.855 +02:00 [INF] HTTP POST /api/payments responded 201 in 139.8 ms
+2026-11-14 09:47:40.932 +02:00 [ERR] Payment gateway call failed for order 17936
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:47:40.932 +02:00 [INF] HTTP POST /api/refunds responded 500 in 47.1 ms
+2026-11-14 09:47:51.650 +02:00 [INF] HTTP GET /api/payments responded 404 in 52.3 ms
+2026-11-14 09:48:02.860 +02:00 [INF] HTTP GET /api/clients/1979 responded 404 in 219.1 ms
+2026-11-14 09:48:13.469 +02:00 [INF] HTTP GET /api/payments/3374 responded 400 in 51.7 ms
+2026-11-14 09:48:24.801 +02:00 [INF] HTTP GET /api/clients/7319 responded 404 in 102.2 ms
+2026-11-14 09:48:35.279 +02:00 [INF] HTTP GET /api/refunds responded 200 in 176.6 ms
+2026-11-14 09:48:46.976 +02:00 [INF] HTTP GET /api/payments/7171 responded 404 in 232.1 ms
+2026-11-14 09:48:57.234 +02:00 [ERR] Payment gateway call failed for order 44477
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:48:57.234 +02:00 [INF] HTTP POST /api/clients/5641 responded 500 in 806.3 ms
+2026-11-14 09:49:08.157 +02:00 [INF] HTTP GET /api/payments responded 404 in 46.7 ms
+2026-11-14 09:49:19.975 +02:00 [WRN] Slow database query on Orders took 1933 ms
+2026-11-14 09:49:19.975 +02:00 [INF] HTTP POST /api/clients/6682 responded 200 in 147.0 ms
+2026-11-14 09:49:30.381 +02:00 [ERR] Payment gateway call failed for order 61838
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:49:30.381 +02:00 [INF] HTTP POST /api/payments/6070 responded 500 in 1397.6 ms
+2026-11-14 09:49:41.206 +02:00 [INF] HTTP GET /api/refunds responded 200 in 162.2 ms
+2026-11-14 09:49:52.355 +02:00 [INF] HTTP GET /api/payments responded 200 in 265.9 ms
+2026-11-14 09:50:03.521 +02:00 [INF] HTTP POST /api/clients/9293 responded 200 in 60.1 ms
+2026-11-14 09:50:14.180 +02:00 [INF] HTTP POST /api/refunds responded 201 in 234.6 ms
+2026-11-14 09:50:25.856 +02:00 [INF] HTTP GET /api/payments/1730 responded 200 in 113.4 ms
+2026-11-14 09:50:36.463 +02:00 [INF] HTTP GET /api/payments responded 200 in 86.3 ms
+2026-11-14 09:50:47.607 +02:00 [INF] HTTP GET /api/payments responded 404 in 147.4 ms
+2026-11-14 09:50:58.567 +02:00 [WRN] Slow database query on Orders took 1715 ms
+2026-11-14 09:50:58.567 +02:00 [INF] HTTP GET /api/refunds responded 200 in 230.9 ms
+2026-11-14 09:51:09.818 +02:00 [INF] HTTP GET /api/payments/5161 responded 200 in 115.3 ms
+2026-11-14 09:51:20.027 +02:00 [INF] HTTP POST /api/payments responded 200 in 259.3 ms
+2026-11-14 09:51:31.639 +02:00 [INF] HTTP GET /api/payments responded 200 in 193.3 ms
+2026-11-14 09:51:42.956 +02:00 [INF] HTTP GET /api/clients/3992 responded 200 in 289.8 ms
+2026-11-14 09:51:53.991 +02:00 [INF] HTTP GET /api/payments/3820 responded 200 in 20.6 ms
+2026-11-14 09:52:04.552 +02:00 [INF] HTTP GET /api/payments responded 400 in 222.7 ms
+2026-11-14 09:52:15.761 +02:00 [INF] HTTP GET /api/clients/1913 responded 200 in 282.0 ms
+2026-11-14 09:52:26.676 +02:00 [INF] HTTP POST /api/refunds responded 200 in 113.4 ms
+2026-11-14 09:52:37.390 +02:00 [INF] HTTP GET /api/refunds responded 200 in 242.8 ms
+2026-11-14 09:52:48.914 +02:00 [INF] HTTP POST /api/payments responded 200 in 49.6 ms
+2026-11-14 09:52:59.832 +02:00 [INF] HTTP POST /api/payments responded 201 in 287.5 ms
+2026-11-14 09:53:10.925 +02:00 [WRN] Slow database query on Orders took 1495 ms
+2026-11-14 09:53:10.925 +02:00 [INF] HTTP POST /api/clients/1356 responded 200 in 98.8 ms
+2026-11-14 09:53:21.233 +02:00 [INF] HTTP GET /api/payments responded 400 in 19.8 ms
+2026-11-14 09:53:32.713 +02:00 [INF] HTTP GET /api/payments/8192 responded 201 in 76.3 ms
+2026-11-14 09:53:43.025 +02:00 [INF] HTTP GET /api/refunds responded 200 in 97.5 ms
+2026-11-14 09:53:54.903 +02:00 [ERR] Payment gateway call failed for order 97592
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:53:54.903 +02:00 [INF] HTTP POST /api/payments responded 500 in 2775.9 ms
+2026-11-14 09:54:05.559 +02:00 [INF] HTTP GET /api/refunds responded 200 in 131.3 ms
+2026-11-14 09:54:16.261 +02:00 [INF] HTTP GET /api/payments/4901 responded 201 in 269.2 ms
+2026-11-14 09:54:27.057 +02:00 [ERR] Payment gateway call failed for order 76557
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:54:27.057 +02:00 [INF] HTTP POST /api/refunds responded 500 in 1024.7 ms
+2026-11-14 09:54:38.140 +02:00 [INF] HTTP GET /api/payments responded 201 in 15.0 ms
+2026-11-14 09:54:49.408 +02:00 [INF] HTTP GET /api/refunds responded 404 in 231.8 ms
+2026-11-14 09:55:00.711 +02:00 [INF] HTTP GET /api/payments/2298 responded 400 in 150.2 ms
+2026-11-14 09:55:11.273 +02:00 [INF] HTTP POST /api/payments/3245 responded 400 in 244.0 ms
+2026-11-14 09:55:22.582 +02:00 [INF] HTTP GET /api/payments/1164 responded 404 in 124.2 ms
+2026-11-14 09:55:33.721 +02:00 [INF] HTTP GET /api/payments responded 400 in 259.8 ms
+2026-11-14 09:55:44.493 +02:00 [INF] HTTP GET /api/payments responded 400 in 82.1 ms
+2026-11-14 09:55:55.186 +02:00 [INF] HTTP GET /api/refunds responded 404 in 179.7 ms
+2026-11-14 09:56:06.004 +02:00 [INF] HTTP GET /api/clients/9448 responded 400 in 75.7 ms
+2026-11-14 09:56:17.830 +02:00 [INF] HTTP POST /api/refunds responded 200 in 89.6 ms
+2026-11-14 09:56:28.107 +02:00 [ERR] Payment gateway call failed for order 80429
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:56:28.107 +02:00 [INF] HTTP POST /api/clients/8314 responded 500 in 405.7 ms
+2026-11-14 09:56:39.243 +02:00 [INF] HTTP POST /api/payments responded 200 in 95.6 ms
+2026-11-14 09:56:50.555 +02:00 [INF] HTTP GET /api/payments responded 400 in 60.9 ms
+2026-11-14 09:57:01.017 +02:00 [INF] HTTP GET /api/clients/9567 responded 200 in 107.2 ms
+2026-11-14 09:57:12.093 +02:00 [INF] HTTP GET /api/payments/1740 responded 201 in 177.0 ms
+2026-11-14 09:57:23.761 +02:00 [INF] HTTP GET /api/payments responded 200 in 163.9 ms
+2026-11-14 09:57:34.227 +02:00 [INF] HTTP POST /api/payments/3412 responded 400 in 120.8 ms
+2026-11-14 09:57:45.948 +02:00 [INF] HTTP POST /api/payments responded 404 in 159.1 ms
+2026-11-14 09:57:56.395 +02:00 [INF] HTTP GET /api/payments responded 200 in 215.5 ms
+2026-11-14 09:58:07.843 +02:00 [ERR] Payment gateway call failed for order 77813
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:58:07.843 +02:00 [INF] HTTP POST /api/refunds responded 500 in 442.4 ms
+2026-11-14 09:58:18.680 +02:00 [INF] HTTP GET /api/refunds responded 200 in 111.2 ms
+2026-11-14 09:58:29.530 +02:00 [INF] HTTP GET /api/payments responded 400 in 9.2 ms
+2026-11-14 09:58:40.139 +02:00 [ERR] Payment gateway call failed for order 15277
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:58:40.139 +02:00 [INF] HTTP POST /api/clients/8433 responded 500 in 106.0 ms
+2026-11-14 09:58:51.641 +02:00 [INF] HTTP POST /api/refunds responded 200 in 187.5 ms
+2026-11-14 09:59:02.250 +02:00 [INF] HTTP GET /api/payments responded 200 in 36.6 ms
+2026-11-14 09:59:13.347 +02:00 [INF] HTTP GET /api/payments/2972 responded 404 in 270.7 ms
+2026-11-14 09:59:24.084 +02:00 [INF] HTTP GET /api/payments/8208 responded 200 in 274.9 ms
+2026-11-14 09:59:35.577 +02:00 [WRN] Slow database query on Orders took 1918 ms
+2026-11-14 09:59:35.577 +02:00 [INF] HTTP POST /api/refunds responded 200 in 88.3 ms
+2026-11-14 09:59:46.454 +02:00 [INF] HTTP GET /api/payments/7334 responded 200 in 139.9 ms
+2026-11-14 09:59:57.548 +02:00 [ERR] Payment gateway call failed for order 53734
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 09:59:57.548 +02:00 [INF] HTTP GET /api/clients/8683 responded 500 in 667.1 ms
+2026-11-14 10:00:08.512 +02:00 [INF] HTTP GET /api/clients/7495 responded 200 in 259.0 ms
+2026-11-14 10:00:19.238 +02:00 [INF] HTTP GET /api/refunds responded 200 in 90.8 ms
+2026-11-14 10:00:30.772 +02:00 [INF] HTTP POST /api/payments/2094 responded 201 in 198.3 ms
+2026-11-14 10:00:41.516 +02:00 [INF] HTTP POST /api/clients/6801 responded 404 in 69.9 ms
+2026-11-14 10:00:52.959 +02:00 [INF] HTTP GET /api/payments/7828 responded 200 in 203.6 ms
+2026-11-14 10:01:03.616 +02:00 [INF] HTTP GET /api/refunds responded 400 in 276.8 ms
+2026-11-14 10:01:14.995 +02:00 [INF] HTTP GET /api/refunds responded 200 in 124.9 ms
+2026-11-14 10:01:25.549 +02:00 [INF] HTTP GET /api/payments responded 404 in 47.4 ms
+2026-11-14 10:01:36.849 +02:00 [INF] HTTP GET /api/refunds responded 400 in 139.0 ms
+2026-11-14 10:01:47.723 +02:00 [INF] HTTP GET /api/refunds responded 404 in 117.2 ms
+2026-11-14 10:01:58.321 +02:00 [INF] HTTP GET /api/clients/7236 responded 404 in 93.3 ms
+2026-11-14 10:02:09.144 +02:00 [INF] HTTP GET /api/clients/4800 responded 200 in 99.2 ms
+2026-11-14 10:02:20.843 +02:00 [INF] HTTP GET /api/payments/6338 responded 200 in 10.6 ms
+2026-11-14 10:02:31.256 +02:00 [INF] HTTP POST /api/clients/5912 responded 404 in 187.1 ms
+2026-11-14 10:02:42.437 +02:00 [INF] HTTP GET /api/clients/7381 responded 404 in 203.8 ms
+2026-11-14 10:02:53.453 +02:00 [INF] HTTP POST /api/payments responded 201 in 114.2 ms
+2026-11-14 10:03:04.400 +02:00 [INF] HTTP GET /api/payments/4083 responded 201 in 230.9 ms
+2026-11-14 10:03:15.899 +02:00 [INF] HTTP POST /api/refunds responded 200 in 110.7 ms
+2026-11-14 10:03:26.366 +02:00 [INF] HTTP POST /api/payments responded 400 in 268.7 ms
+2026-11-14 10:03:37.689 +02:00 [INF] HTTP POST /api/clients/3562 responded 404 in 64.7 ms
+2026-11-14 10:03:48.893 +02:00 [INF] HTTP GET /api/clients/3988 responded 404 in 34.7 ms
+2026-11-14 10:03:59.569 +02:00 [INF] HTTP GET /api/payments responded 200 in 214.1 ms
+2026-11-14 10:04:10.552 +02:00 [INF] HTTP GET /api/refunds responded 400 in 11.8 ms
+2026-11-14 10:04:21.175 +02:00 [INF] HTTP POST /api/refunds responded 404 in 62.0 ms
+2026-11-14 10:04:32.601 +02:00 [INF] HTTP POST /api/payments/3568 responded 200 in 11.6 ms
+2026-11-14 10:04:43.076 +02:00 [INF] HTTP POST /api/clients/8659 responded 200 in 196.1 ms
+2026-11-14 10:04:54.684 +02:00 [INF] HTTP POST /api/refunds responded 200 in 53.3 ms
+2026-11-14 10:05:05.266 +02:00 [INF] HTTP GET /api/payments responded 404 in 117.5 ms
+2026-11-14 10:05:16.054 +02:00 [ERR] Payment gateway call failed for order 41233
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:05:16.054 +02:00 [INF] HTTP GET /api/clients/1719 responded 500 in 750.2 ms
+2026-11-14 10:05:27.043 +02:00 [INF] HTTP GET /api/payments/6157 responded 201 in 93.2 ms
+2026-11-14 10:05:38.602 +02:00 [INF] HTTP GET /api/clients/2106 responded 400 in 216.4 ms
+2026-11-14 10:05:49.221 +02:00 [INF] HTTP POST /api/refunds responded 200 in 29.0 ms
+2026-11-14 10:06:00.169 +02:00 [INF] HTTP GET /api/clients/4056 responded 200 in 120.6 ms
+2026-11-14 10:06:11.362 +02:00 [INF] HTTP GET /api/refunds responded 400 in 22.4 ms
+2026-11-14 10:06:22.123 +02:00 [INF] HTTP GET /api/refunds responded 200 in 105.3 ms
+2026-11-14 10:06:33.435 +02:00 [INF] HTTP GET /api/refunds responded 200 in 212.6 ms
+2026-11-14 10:06:44.092 +02:00 [INF] HTTP GET /api/refunds responded 201 in 251.4 ms
+2026-11-14 10:06:55.804 +02:00 [INF] HTTP GET /api/payments/7027 responded 201 in 114.9 ms
+2026-11-14 10:07:06.958 +02:00 [INF] HTTP GET /api/payments/5870 responded 200 in 257.9 ms
+2026-11-14 10:07:17.675 +02:00 [INF] HTTP POST /api/refunds responded 404 in 76.1 ms
+2026-11-14 10:07:28.608 +02:00 [INF] HTTP GET /api/payments/3056 responded 200 in 164.2 ms
+2026-11-14 10:07:39.270 +02:00 [INF] HTTP POST /api/clients/1470 responded 200 in 95.3 ms
+2026-11-14 10:07:50.389 +02:00 [INF] HTTP GET /api/payments responded 400 in 267.7 ms
+2026-11-14 10:08:01.068 +02:00 [INF] HTTP GET /api/refunds responded 400 in 95.4 ms
+2026-11-14 10:08:12.226 +02:00 [INF] HTTP GET /api/payments/7536 responded 201 in 233.2 ms
+2026-11-14 10:08:23.882 +02:00 [ERR] Payment gateway call failed for order 99079
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:08:23.882 +02:00 [INF] HTTP GET /api/payments/5530 responded 500 in 2398.8 ms
+2026-11-14 10:08:34.690 +02:00 [INF] HTTP POST /api/clients/1413 responded 201 in 76.8 ms
+2026-11-14 10:08:45.846 +02:00 [INF] HTTP GET /api/refunds responded 200 in 274.1 ms
+2026-11-14 10:08:56.734 +02:00 [INF] HTTP GET /api/payments responded 201 in 61.8 ms
+2026-11-14 10:09:07.303 +02:00 [INF] HTTP POST /api/clients/1642 responded 400 in 282.6 ms
+2026-11-14 10:09:18.564 +02:00 [INF] HTTP POST /api/payments/9157 responded 201 in 202.0 ms
+2026-11-14 10:09:29.575 +02:00 [INF] HTTP POST /api/payments responded 200 in 262.9 ms
+2026-11-14 10:09:40.585 +02:00 [INF] HTTP POST /api/payments responded 200 in 65.4 ms
+2026-11-14 10:09:51.914 +02:00 [INF] HTTP POST /api/payments responded 400 in 185.8 ms
+2026-11-14 10:10:02.220 +02:00 [INF] HTTP GET /api/payments responded 200 in 208.4 ms
+2026-11-14 10:10:13.738 +02:00 [INF] HTTP GET /api/clients/9333 responded 200 in 130.2 ms
+2026-11-14 10:10:24.511 +02:00 [ERR] Payment gateway call failed for order 83285
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:10:24.511 +02:00 [INF] HTTP GET /api/payments/9020 responded 500 in 785.8 ms
+2026-11-14 10:10:35.546 +02:00 [INF] HTTP GET /api/payments/9911 responded 200 in 52.9 ms
+2026-11-14 10:10:46.347 +02:00 [INF] HTTP POST /api/payments responded 200 in 206.8 ms
+2026-11-14 10:10:57.486 +02:00 [INF] HTTP POST /api/clients/4897 responded 404 in 208.4 ms
+2026-11-14 10:11:08.133 +02:00 [INF] HTTP GET /api/refunds responded 200 in 177.5 ms
+2026-11-14 10:11:19.240 +02:00 [INF] HTTP GET /api/payments responded 200 in 204.1 ms
+2026-11-14 10:11:30.154 +02:00 [INF] HTTP GET /api/clients/7653 responded 200 in 6.7 ms
+2026-11-14 10:11:41.486 +02:00 [INF] HTTP GET /api/payments responded 200 in 211.4 ms
+2026-11-14 10:11:52.448 +02:00 [INF] HTTP GET /api/payments responded 404 in 110.8 ms
+2026-11-14 10:12:03.168 +02:00 [INF] HTTP GET /api/payments responded 201 in 27.9 ms
+2026-11-14 10:12:14.717 +02:00 [INF] HTTP POST /api/refunds responded 201 in 148.0 ms
+2026-11-14 10:12:25.783 +02:00 [INF] HTTP GET /api/refunds responded 400 in 87.9 ms
+2026-11-14 10:12:36.613 +02:00 [INF] HTTP GET /api/refunds responded 200 in 10.5 ms
+2026-11-14 10:12:47.395 +02:00 [INF] HTTP GET /api/payments/5854 responded 400 in 159.1 ms
+2026-11-14 10:12:58.895 +02:00 [INF] HTTP POST /api/payments/2674 responded 400 in 186.2 ms
+2026-11-14 10:13:09.379 +02:00 [INF] HTTP GET /api/refunds responded 404 in 276.2 ms
+2026-11-14 10:13:20.837 +02:00 [ERR] Payment gateway call failed for order 84300
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:13:20.837 +02:00 [INF] HTTP GET /api/refunds responded 500 in 2408.9 ms
+2026-11-14 10:13:31.921 +02:00 [INF] HTTP GET /api/clients/1828 responded 201 in 220.0 ms
+2026-11-14 10:13:42.995 +02:00 [INF] HTTP POST /api/payments responded 200 in 134.6 ms
+2026-11-14 10:13:53.969 +02:00 [INF] HTTP GET /api/payments responded 200 in 217.7 ms
+2026-11-14 10:14:04.002 +02:00 [WRN] Slow database query on Orders took 913 ms
+2026-11-14 10:14:04.002 +02:00 [INF] HTTP GET /api/clients/3345 responded 200 in 155.8 ms
+2026-11-14 10:14:15.421 +02:00 [ERR] Payment gateway call failed for order 33105
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:14:15.421 +02:00 [INF] HTTP GET /api/refunds responded 500 in 2712.3 ms
+2026-11-14 10:14:26.164 +02:00 [INF] HTTP GET /api/refunds responded 400 in 106.4 ms
+2026-11-14 10:14:37.195 +02:00 [INF] HTTP GET /api/payments responded 201 in 291.5 ms
+2026-11-14 10:14:48.908 +02:00 [INF] HTTP POST /api/payments/7575 responded 200 in 217.7 ms
+2026-11-14 10:14:59.331 +02:00 [INF] HTTP GET /api/refunds responded 400 in 43.6 ms
+2026-11-14 10:15:10.865 +02:00 [INF] HTTP GET /api/payments responded 201 in 208.3 ms
+2026-11-14 10:15:21.146 +02:00 [INF] HTTP GET /api/refunds responded 404 in 134.1 ms
+2026-11-14 10:15:32.261 +02:00 [INF] HTTP GET /api/payments/3957 responded 200 in 68.7 ms
+2026-11-14 10:15:43.837 +02:00 [INF] HTTP POST /api/payments responded 400 in 148.3 ms
+2026-11-14 10:15:54.554 +02:00 [INF] HTTP POST /api/payments/9867 responded 400 in 155.4 ms
+2026-11-14 10:16:05.588 +02:00 [WRN] Slow database query on Orders took 1700 ms
+2026-11-14 10:16:05.588 +02:00 [INF] HTTP POST /api/payments responded 200 in 42.9 ms
+2026-11-14 10:16:16.503 +02:00 [INF] HTTP GET /api/payments responded 400 in 119.4 ms
+2026-11-14 10:16:27.171 +02:00 [INF] HTTP GET /api/payments/8784 responded 404 in 20.1 ms
+2026-11-14 10:16:38.236 +02:00 [INF] HTTP GET /api/refunds responded 200 in 139.5 ms
+2026-11-14 10:16:49.120 +02:00 [INF] HTTP GET /api/payments/7979 responded 200 in 170.2 ms
+2026-11-14 10:17:00.917 +02:00 [INF] HTTP GET /api/refunds responded 200 in 241.8 ms
+2026-11-14 10:17:11.736 +02:00 [INF] HTTP GET /api/payments responded 404 in 222.0 ms
+2026-11-14 10:17:22.948 +02:00 [INF] HTTP POST /api/clients/1712 responded 200 in 166.0 ms
+2026-11-14 10:17:33.803 +02:00 [INF] HTTP POST /api/payments responded 200 in 60.4 ms
+2026-11-14 10:17:44.446 +02:00 [INF] HTTP GET /api/clients/2860 responded 200 in 240.8 ms
+2026-11-14 10:17:55.185 +02:00 [INF] HTTP GET /api/refunds responded 200 in 162.9 ms
+2026-11-14 10:18:06.689 +02:00 [ERR] Payment gateway call failed for order 29783
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:18:06.689 +02:00 [INF] HTTP GET /api/refunds responded 500 in 1463.0 ms
+2026-11-14 10:18:17.483 +02:00 [INF] HTTP GET /api/payments responded 400 in 204.8 ms
+2026-11-14 10:18:28.392 +02:00 [INF] HTTP POST /api/clients/3593 responded 201 in 71.1 ms
+2026-11-14 10:18:39.957 +02:00 [INF] HTTP GET /api/payments responded 200 in 268.5 ms
+2026-11-14 10:18:50.589 +02:00 [INF] HTTP GET /api/payments responded 400 in 141.9 ms
+2026-11-14 10:19:01.577 +02:00 [ERR] Payment gateway call failed for order 85911
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:19:01.577 +02:00 [INF] HTTP GET /api/clients/6794 responded 500 in 1451.9 ms
+2026-11-14 10:19:12.226 +02:00 [ERR] Payment gateway call failed for order 29114
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:19:12.226 +02:00 [INF] HTTP POST /api/payments/8526 responded 500 in 2181.7 ms
+2026-11-14 10:19:23.143 +02:00 [INF] HTTP GET /api/clients/5478 responded 200 in 109.0 ms
+2026-11-14 10:19:34.573 +02:00 [INF] HTTP POST /api/payments/1558 responded 200 in 262.1 ms
+2026-11-14 10:19:45.774 +02:00 [INF] HTTP GET /api/payments responded 200 in 262.2 ms
+2026-11-14 10:19:56.938 +02:00 [INF] HTTP GET /api/payments responded 404 in 256.4 ms
+2026-11-14 10:20:07.245 +02:00 [INF] HTTP GET /api/clients/6479 responded 400 in 99.0 ms
+2026-11-14 10:20:18.988 +02:00 [INF] HTTP GET /api/clients/9253 responded 200 in 299.0 ms
+2026-11-14 10:20:29.150 +02:00 [INF] HTTP POST /api/payments/1118 responded 201 in 120.6 ms
+2026-11-14 10:20:40.772 +02:00 [INF] HTTP GET /api/payments/2086 responded 200 in 77.9 ms
+2026-11-14 10:20:51.571 +02:00 [INF] HTTP GET /api/refunds responded 200 in 176.7 ms
+2026-11-14 10:21:02.304 +02:00 [INF] HTTP GET /api/refunds responded 400 in 130.2 ms
+2026-11-14 10:21:13.868 +02:00 [INF] HTTP GET /api/payments responded 200 in 269.6 ms
+2026-11-14 10:21:24.546 +02:00 [INF] HTTP GET /api/payments/5391 responded 200 in 17.2 ms
+2026-11-14 10:21:35.447 +02:00 [WRN] Slow database query on Orders took 1295 ms
+2026-11-14 10:21:35.447 +02:00 [INF] HTTP POST /api/refunds responded 200 in 221.0 ms
+2026-11-14 10:21:46.963 +02:00 [INF] HTTP GET /api/payments responded 404 in 104.3 ms
+2026-11-14 10:21:57.136 +02:00 [INF] HTTP POST /api/payments/5434 responded 200 in 193.0 ms
+2026-11-14 10:22:08.922 +02:00 [INF] HTTP GET /api/payments/6268 responded 200 in 195.7 ms
+2026-11-14 10:22:19.405 +02:00 [INF] HTTP GET /api/refunds responded 200 in 28.9 ms
+2026-11-14 10:22:30.612 +02:00 [INF] HTTP GET /api/clients/7546 responded 200 in 10.6 ms
+2026-11-14 10:22:41.316 +02:00 [INF] HTTP GET /api/refunds responded 400 in 251.0 ms
+2026-11-14 10:22:52.156 +02:00 [INF] HTTP GET /api/payments responded 200 in 109.3 ms
+2026-11-14 10:23:03.361 +02:00 [INF] HTTP POST /api/refunds responded 404 in 48.6 ms
+2026-11-14 10:23:14.981 +02:00 [INF] HTTP POST /api/refunds responded 400 in 144.8 ms
+2026-11-14 10:23:25.031 +02:00 [INF] HTTP POST /api/refunds responded 404 in 160.3 ms
+2026-11-14 10:23:36.273 +02:00 [INF] HTTP POST /api/refunds responded 400 in 243.3 ms
+2026-11-14 10:23:47.976 +02:00 [INF] HTTP GET /api/payments/4738 responded 200 in 281.3 ms
+2026-11-14 10:23:58.624 +02:00 [INF] HTTP POST /api/payments responded 404 in 233.9 ms
+2026-11-14 10:24:09.259 +02:00 [INF] HTTP GET /api/refunds responded 200 in 160.0 ms
+2026-11-14 10:24:20.350 +02:00 [INF] HTTP GET /api/payments/8234 responded 200 in 270.6 ms
+2026-11-14 10:24:31.389 +02:00 [INF] HTTP GET /api/payments/6305 responded 400 in 7.6 ms
+2026-11-14 10:24:42.806 +02:00 [INF] HTTP GET /api/clients/6745 responded 201 in 124.7 ms
+2026-11-14 10:24:53.919 +02:00 [ERR] Payment gateway call failed for order 66858
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:24:53.919 +02:00 [INF] HTTP GET /api/payments/1503 responded 500 in 727.8 ms
+2026-11-14 10:25:04.354 +02:00 [INF] HTTP POST /api/refunds responded 201 in 67.3 ms
+2026-11-14 10:25:15.569 +02:00 [INF] HTTP GET /api/payments/8821 responded 200 in 247.4 ms
+2026-11-14 10:25:26.282 +02:00 [INF] HTTP GET /api/refunds responded 200 in 51.0 ms
+2026-11-14 10:25:37.682 +02:00 [ERR] Payment gateway call failed for order 37501
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:25:37.682 +02:00 [INF] HTTP POST /api/clients/4474 responded 500 in 2554.5 ms
+2026-11-14 10:25:48.735 +02:00 [INF] HTTP GET /api/payments responded 200 in 298.5 ms
+2026-11-14 10:25:59.297 +02:00 [INF] HTTP GET /api/payments responded 200 in 42.6 ms
+2026-11-14 10:26:10.302 +02:00 [INF] HTTP GET /api/refunds responded 201 in 29.8 ms
+2026-11-14 10:26:21.339 +02:00 [INF] HTTP GET /api/clients/6499 responded 200 in 238.3 ms
+2026-11-14 10:26:32.689 +02:00 [INF] HTTP POST /api/payments responded 404 in 130.9 ms
+2026-11-14 10:26:43.104 +02:00 [WRN] Slow database query on Orders took 1025 ms
+2026-11-14 10:26:43.104 +02:00 [INF] HTTP GET /api/payments responded 200 in 38.8 ms
+2026-11-14 10:26:54.487 +02:00 [ERR] Payment gateway call failed for order 39348
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:26:54.487 +02:00 [INF] HTTP GET /api/payments/9608 responded 500 in 2057.1 ms
+2026-11-14 10:27:05.147 +02:00 [INF] HTTP GET /api/payments responded 200 in 106.8 ms
+2026-11-14 10:27:16.215 +02:00 [INF] HTTP GET /api/payments/2186 responded 200 in 81.6 ms
+2026-11-14 10:27:27.068 +02:00 [ERR] Payment gateway call failed for order 82957
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:27:27.068 +02:00 [INF] HTTP POST /api/payments responded 500 in 2855.9 ms
+2026-11-14 10:27:38.267 +02:00 [INF] HTTP POST /api/refunds responded 200 in 166.0 ms
+2026-11-14 10:27:49.690 +02:00 [INF] HTTP GET /api/refunds responded 201 in 116.7 ms
+2026-11-14 10:28:00.151 +02:00 [INF] HTTP GET /api/clients/7716 responded 400 in 4.6 ms
+2026-11-14 10:28:11.607 +02:00 [INF] HTTP GET /api/refunds responded 400 in 37.5 ms
+2026-11-14 10:28:22.843 +02:00 [INF] HTTP GET /api/payments responded 200 in 206.4 ms
+2026-11-14 10:28:33.442 +02:00 [ERR] Payment gateway call failed for order 94846
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:28:33.442 +02:00 [INF] HTTP POST /api/refunds responded 500 in 2560.9 ms
+2026-11-14 10:28:44.510 +02:00 [INF] HTTP POST /api/clients/4840 responded 201 in 108.5 ms
+2026-11-14 10:28:55.064 +02:00 [INF] HTTP GET /api/refunds responded 404 in 200.3 ms
+2026-11-14 10:29:06.923 +02:00 [INF] HTTP GET /api/refunds responded 200 in 158.0 ms
+2026-11-14 10:29:17.476 +02:00 [INF] HTTP GET /api/payments/3327 responded 404 in 111.1 ms
+2026-11-14 10:29:28.204 +02:00 [INF] HTTP GET /api/payments/6993 responded 200 in 247.1 ms
+2026-11-14 10:29:39.460 +02:00 [INF] HTTP GET /api/payments responded 201 in 39.5 ms
+2026-11-14 10:29:50.153 +02:00 [INF] HTTP GET /api/refunds responded 400 in 241.6 ms
+2026-11-14 10:30:01.521 +02:00 [INF] HTTP GET /api/clients/2441 responded 201 in 209.4 ms
+2026-11-14 10:30:12.449 +02:00 [INF] HTTP POST /api/clients/3859 responded 400 in 41.8 ms
+2026-11-14 10:30:23.488 +02:00 [INF] HTTP POST /api/payments/7074 responded 201 in 78.1 ms
+2026-11-14 10:30:34.556 +02:00 [INF] HTTP GET /api/payments responded 200 in 216.3 ms
+2026-11-14 10:30:45.274 +02:00 [INF] HTTP GET /api/refunds responded 201 in 30.1 ms
+2026-11-14 10:30:56.636 +02:00 [INF] HTTP GET /api/payments responded 200 in 186.5 ms
+2026-11-14 10:31:07.371 +02:00 [INF] HTTP GET /api/payments responded 400 in 226.7 ms
+2026-11-14 10:31:18.969 +02:00 [INF] HTTP GET /api/clients/5207 responded 404 in 41.5 ms
+2026-11-14 10:31:29.618 +02:00 [INF] HTTP POST /api/refunds responded 200 in 26.7 ms
+2026-11-14 10:31:40.445 +02:00 [INF] HTTP GET /api/clients/9614 responded 400 in 227.8 ms
+2026-11-14 10:31:51.025 +02:00 [INF] HTTP POST /api/clients/8572 responded 201 in 298.5 ms
+2026-11-14 10:32:02.176 +02:00 [INF] HTTP GET /api/payments responded 404 in 226.6 ms
+2026-11-14 10:32:13.009 +02:00 [INF] HTTP GET /api/payments/4280 responded 400 in 90.3 ms
+2026-11-14 10:32:24.330 +02:00 [WRN] Slow database query on Orders took 957 ms
+2026-11-14 10:32:24.330 +02:00 [INF] HTTP GET /api/clients/8534 responded 200 in 172.6 ms
+2026-11-14 10:32:35.015 +02:00 [INF] HTTP GET /api/clients/2445 responded 200 in 247.7 ms
+2026-11-14 10:32:46.199 +02:00 [INF] HTTP GET /api/refunds responded 400 in 127.1 ms
+2026-11-14 10:32:57.583 +02:00 [INF] HTTP POST /api/clients/1820 responded 200 in 59.5 ms
+2026-11-14 10:33:08.982 +02:00 [INF] HTTP GET /api/payments/9829 responded 200 in 96.0 ms
+2026-11-14 10:33:19.255 +02:00 [INF] HTTP POST /api/refunds responded 400 in 18.2 ms
+2026-11-14 10:33:30.304 +02:00 [INF] HTTP POST /api/clients/8145 responded 200 in 42.1 ms
+2026-11-14 10:33:41.207 +02:00 [INF] HTTP POST /api/refunds responded 404 in 45.0 ms
+2026-11-14 10:33:52.930 +02:00 [INF] HTTP GET /api/refunds responded 404 in 200.2 ms
+2026-11-14 10:34:03.729 +02:00 [INF] HTTP GET /api/payments responded 404 in 247.5 ms
+2026-11-14 10:34:14.035 +02:00 [INF] HTTP GET /api/payments/8194 responded 200 in 241.3 ms
+2026-11-14 10:34:25.592 +02:00 [INF] HTTP POST /api/clients/7651 responded 200 in 20.1 ms
+2026-11-14 10:34:36.433 +02:00 [INF] HTTP GET /api/payments responded 200 in 244.8 ms
+2026-11-14 10:34:47.497 +02:00 [INF] HTTP GET /api/payments responded 400 in 203.5 ms
+2026-11-14 10:34:58.294 +02:00 [INF] HTTP GET /api/payments/9756 responded 400 in 64.5 ms
+2026-11-14 10:35:09.100 +02:00 [INF] HTTP GET /api/payments responded 201 in 69.5 ms
+2026-11-14 10:35:20.833 +02:00 [INF] HTTP GET /api/clients/7956 responded 400 in 42.6 ms
+2026-11-14 10:35:31.160 +02:00 [INF] HTTP GET /api/clients/5810 responded 200 in 213.0 ms
+2026-11-14 10:35:42.719 +02:00 [INF] HTTP GET /api/refunds responded 200 in 48.1 ms
+2026-11-14 10:35:53.799 +02:00 [INF] HTTP GET /api/payments/7414 responded 200 in 193.3 ms
+2026-11-14 10:36:04.223 +02:00 [INF] HTTP GET /api/payments responded 200 in 130.7 ms
+2026-11-14 10:36:15.678 +02:00 [INF] HTTP GET /api/payments responded 200 in 298.9 ms
+2026-11-14 10:36:26.939 +02:00 [INF] HTTP GET /api/payments responded 201 in 267.1 ms
+2026-11-14 10:36:37.912 +02:00 [INF] HTTP GET /api/payments/8942 responded 404 in 176.4 ms
+2026-11-14 10:36:48.756 +02:00 [INF] HTTP GET /api/payments/3288 responded 200 in 174.9 ms
+2026-11-14 10:36:59.299 +02:00 [INF] HTTP GET /api/payments responded 200 in 198.0 ms
+2026-11-14 10:37:10.050 +02:00 [INF] HTTP GET /api/refunds responded 200 in 223.5 ms
+2026-11-14 10:37:21.178 +02:00 [INF] HTTP POST /api/refunds responded 200 in 224.8 ms
+2026-11-14 10:37:32.112 +02:00 [ERR] Payment gateway call failed for order 15191
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:37:32.112 +02:00 [INF] HTTP GET /api/payments/7443 responded 500 in 1541.6 ms
+2026-11-14 10:37:43.097 +02:00 [INF] HTTP POST /api/payments/7804 responded 200 in 114.3 ms
+2026-11-14 10:37:54.663 +02:00 [INF] HTTP GET /api/payments/6889 responded 200 in 101.5 ms
+2026-11-14 10:38:05.842 +02:00 [INF] HTTP GET /api/clients/5970 responded 200 in 264.1 ms
+2026-11-14 10:38:16.117 +02:00 [INF] HTTP POST /api/clients/5431 responded 200 in 141.9 ms
+2026-11-14 10:38:27.164 +02:00 [INF] HTTP GET /api/payments responded 200 in 87.2 ms
+2026-11-14 10:38:38.555 +02:00 [INF] HTTP POST /api/payments/4930 responded 404 in 74.2 ms
+2026-11-14 10:38:49.094 +02:00 [INF] HTTP GET /api/payments responded 400 in 172.4 ms
+2026-11-14 10:39:00.688 +02:00 [INF] HTTP GET /api/payments/2426 responded 200 in 299.5 ms
+2026-11-14 10:39:11.424 +02:00 [INF] HTTP POST /api/payments responded 200 in 200.2 ms
+2026-11-14 10:39:22.217 +02:00 [INF] HTTP POST /api/payments/9404 responded 200 in 24.7 ms
+2026-11-14 10:39:33.337 +02:00 [INF] HTTP GET /api/payments responded 400 in 54.9 ms
+2026-11-14 10:39:44.303 +02:00 [INF] HTTP POST /api/payments responded 200 in 97.3 ms
+2026-11-14 10:39:55.931 +02:00 [INF] HTTP GET /api/clients/1528 responded 200 in 220.9 ms
+2026-11-14 10:40:06.678 +02:00 [INF] HTTP GET /api/payments/6641 responded 200 in 206.8 ms
+2026-11-14 10:40:17.708 +02:00 [ERR] Payment gateway call failed for order 78885
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:40:17.708 +02:00 [INF] HTTP GET /api/payments responded 500 in 2338.4 ms
+2026-11-14 10:40:28.908 +02:00 [ERR] Payment gateway call failed for order 57921
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:40:28.908 +02:00 [INF] HTTP POST /api/payments responded 500 in 2360.5 ms
+2026-11-14 10:40:39.092 +02:00 [INF] HTTP GET /api/refunds responded 400 in 150.4 ms
+2026-11-14 10:40:50.259 +02:00 [INF] HTTP POST /api/refunds responded 400 in 178.3 ms
+2026-11-14 10:41:01.435 +02:00 [INF] HTTP POST /api/refunds responded 200 in 23.2 ms
+2026-11-14 10:41:12.783 +02:00 [INF] HTTP GET /api/refunds responded 201 in 169.8 ms
+2026-11-14 10:41:23.877 +02:00 [INF] HTTP POST /api/payments responded 400 in 205.8 ms
+2026-11-14 10:41:34.941 +02:00 [INF] HTTP GET /api/clients/7655 responded 400 in 251.4 ms
+2026-11-14 10:41:45.339 +02:00 [INF] HTTP GET /api/clients/5993 responded 404 in 7.9 ms
+2026-11-14 10:41:56.110 +02:00 [INF] HTTP GET /api/clients/7859 responded 201 in 46.3 ms
+2026-11-14 10:42:07.545 +02:00 [INF] HTTP GET /api/payments responded 404 in 12.7 ms
+2026-11-14 10:42:18.335 +02:00 [INF] HTTP POST /api/refunds responded 201 in 199.3 ms
+2026-11-14 10:42:29.807 +02:00 [INF] HTTP POST /api/payments responded 201 in 247.4 ms
+2026-11-14 10:42:40.184 +02:00 [INF] HTTP GET /api/refunds responded 200 in 107.4 ms
+2026-11-14 10:42:51.815 +02:00 [INF] HTTP GET /api/clients/6055 responded 404 in 237.9 ms
+2026-11-14 10:43:02.606 +02:00 [ERR] Payment gateway call failed for order 32983
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:43:02.606 +02:00 [INF] HTTP POST /api/payments/7405 responded 500 in 313.9 ms
+2026-11-14 10:43:13.245 +02:00 [INF] HTTP POST /api/refunds responded 404 in 221.2 ms
+2026-11-14 10:43:24.753 +02:00 [INF] HTTP GET /api/clients/3212 responded 200 in 155.7 ms
+2026-11-14 10:43:35.331 +02:00 [INF] HTTP GET /api/refunds responded 400 in 190.7 ms
+2026-11-14 10:43:46.375 +02:00 [INF] HTTP GET /api/payments responded 200 in 19.9 ms
+2026-11-14 10:43:57.834 +02:00 [INF] HTTP GET /api/payments responded 404 in 267.7 ms
+2026-11-14 10:44:08.728 +02:00 [INF] HTTP GET /api/clients/1575 responded 200 in 286.0 ms
+2026-11-14 10:44:19.891 +02:00 [INF] HTTP POST /api/payments/4074 responded 404 in 16.9 ms
+2026-11-14 10:44:30.392 +02:00 [INF] HTTP GET /api/refunds responded 200 in 127.9 ms
+2026-11-14 10:44:41.978 +02:00 [INF] HTTP GET /api/payments responded 400 in 110.0 ms
+2026-11-14 10:44:52.902 +02:00 [INF] HTTP POST /api/refunds responded 200 in 238.7 ms
+2026-11-14 10:45:03.347 +02:00 [INF] HTTP POST /api/payments/4289 responded 200 in 51.2 ms
+2026-11-14 10:45:14.738 +02:00 [INF] HTTP GET /api/payments/6111 responded 201 in 233.8 ms
+2026-11-14 10:45:25.360 +02:00 [INF] HTTP GET /api/payments/5462 responded 201 in 61.6 ms
+2026-11-14 10:45:36.320 +02:00 [INF] HTTP GET /api/clients/7604 responded 200 in 120.0 ms
+2026-11-14 10:45:47.385 +02:00 [INF] HTTP GET /api/clients/5372 responded 404 in 136.7 ms
+2026-11-14 10:45:58.837 +02:00 [INF] HTTP GET /api/payments/6156 responded 404 in 142.7 ms
+2026-11-14 10:46:09.558 +02:00 [INF] HTTP GET /api/clients/2252 responded 400 in 275.5 ms
+2026-11-14 10:46:20.529 +02:00 [INF] HTTP GET /api/refunds responded 200 in 15.3 ms
+2026-11-14 10:46:31.826 +02:00 [INF] HTTP POST /api/refunds responded 200 in 294.2 ms
+2026-11-14 10:46:42.885 +02:00 [INF] HTTP POST /api/payments responded 200 in 52.3 ms
+2026-11-14 10:46:53.176 +02:00 [INF] HTTP GET /api/payments responded 400 in 252.2 ms
+2026-11-14 10:47:04.399 +02:00 [INF] HTTP GET /api/clients/6518 responded 400 in 261.9 ms
+2026-11-14 10:47:15.531 +02:00 [INF] HTTP GET /api/clients/5730 responded 400 in 22.6 ms
+2026-11-14 10:47:26.413 +02:00 [INF] HTTP POST /api/payments responded 200 in 173.4 ms
+2026-11-14 10:47:37.273 +02:00 [INF] HTTP GET /api/payments/3476 responded 200 in 151.7 ms
+2026-11-14 10:47:48.898 +02:00 [INF] HTTP GET /api/payments responded 400 in 263.0 ms
+2026-11-14 10:47:59.384 +02:00 [INF] HTTP POST /api/refunds responded 404 in 84.1 ms
+2026-11-14 10:48:10.213 +02:00 [INF] HTTP GET /api/payments/6066 responded 404 in 292.5 ms
+2026-11-14 10:48:21.802 +02:00 [INF] HTTP POST /api/refunds responded 200 in 252.1 ms
+2026-11-14 10:48:32.325 +02:00 [INF] HTTP POST /api/payments responded 201 in 84.7 ms
+2026-11-14 10:48:43.059 +02:00 [INF] HTTP GET /api/clients/1528 responded 201 in 35.8 ms
+2026-11-14 10:48:54.224 +02:00 [INF] HTTP POST /api/refunds responded 200 in 168.3 ms
+2026-11-14 10:49:05.820 +02:00 [ERR] Payment gateway call failed for order 32680
+System.Net.Http.HttpRequestException: Connection refused (gateway.local:443)
+   at Payments.Gateway.PaymobClient.ChargeAsync(ChargeRequest req) in /src/Payments/Gateway/PaymobClient.cs:line 88
+   at Payments.Api.PaymentsController.Create(CreatePayment cmd) in /src/Payments.Api/PaymentsController.cs:line 41
+2026-11-14 10:49:05.820 +02:00 [INF] HTTP POST /api/refunds responded 500 in 88.0 ms
+2026-11-14 10:49:16.504 +02:00 [INF] HTTP GET /api/clients/7134 responded 200 in 218.2 ms
+2026-11-14 10:49:27.584 +02:00 [INF] HTTP POST /api/clients/7394 responded 201 in 70.2 ms
+2026-11-14 10:49:38.867 +02:00 [INF] HTTP POST /api/payments responded 200 in 24.2 ms
+2026-11-14 10:49:49.477 +02:00 [INF] HTTP GET /api/payments/8066 responded 400 in 186.5 ms
